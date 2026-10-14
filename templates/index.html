@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b6748">
+    <meta name="description" content="Chbotly - VCET Puttur college assistant for departments, admissions, faculty, courses and campus information.">
+
+    <title>Chbotly | VCET Puttur College Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <main class="app-shell">
+        <section class="chat-card" aria-label="Chbotly college assistant">
+
+            <header class="top-header">
+                <div class="brand">
+                    <div class="brand-logo" aria-hidden="true">C</div>
+                    <div class="brand-text">
+                        <h1>Chbotly</h1>
+                        <p>VCET Puttur College Assistant</p>
+                    </div>
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    <span>Online</span>
+                </div>
+            </header>
+
+            <section class="welcome-banner">
+                <div class="welcome-icon" aria-hidden="true">🎓</div>
+                <div>
+                    <h2>Your college information assistant</h2>
+                    <p>
+                        Ask about departments, HODs, faculty, admissions,
+                        courses, fees, placements and campus facilities.
+                    </p>
+                </div>
+            </section>
+
+            <div class="quick-section">
+                <p class="quick-heading">Quick questions</p>
+
+                <div class="quick-buttons">
+                    <button type="button" class="quick-btn" data-message="admission">
+                        Admissions
+                    </button>
+                    <button type="button" class="quick-btn" data-message="courses">
+                        Courses
+                    </button>
+                    <button type="button" class="quick-btn" data-message="CSE staff">
+                        CSE Staff
+                    </button>
+                    <button type="button" class="quick-btn" data-message="Data Science HOD">
+                        Data Science HOD
+                    </button>
+                    <button type="button" class="quick-btn" data-message="college address">
+                        Address
+                    </button>
+                    <button type="button" class="quick-btn" data-message="placements">
+                        Placements
+                    </button>
+                </div>
+            </div>
+
+            <section
+                id="chat-box"
+                class="chat-box"
+                aria-label="Conversation"
+                aria-live="polite"
+            >
+                <div class="message bot-message">
+                    <div class="avatar" aria-hidden="true">C</div>
+                    <div class="message-content">
+                        Hello! Welcome to Chbotly. 👋
+
+                        I'm here to help you find information about Vivekananda
+                        College of Engineering &amp; Technology, Puttur.
+
+                        You can type normally or use short forms such as
+                        "gm", "admsn", "cse hod", or "whr is puttr".
+                        I'll try to understand spelling mistakes too.
+
+                        What would you like to know?
+                    </div>
+                </div>
+            </section>
+
+            <div class="input-area">
+                <form id="chat-form" class="chat-form">
+                    <input
+                        type="text"
+                        id="message-input"
+                        name="message"
+                        placeholder="Ask Chbotly anything about VCET..."
+                        autocomplete="off"
+                        aria-label="Type your message"
+                        required
+                    >
+
+                    <button type="submit" id="send-btn" aria-label="Send message">
+                        <span>Send</span>
+                        <span aria-hidden="true">➤</span>
+                    </button>
+                </form>
+
+                <p class="input-note">
+                    Chbotly may not have every answer. Check official VCET links
+                    for the latest information.
+                </p>
+            </div>
+
+            <footer class="chat-footer">
+                <a href="https://vcetputtur.ac.in/" target="_blank" rel="noopener noreferrer">
+                    Official VCET Website
+                </a>
+                <span aria-hidden="true">•</span>
+                <a href="https://vcetputtur.ac.in/faculty/" target="_blank" rel="noopener noreferrer">
+                    Faculty Directory
+                </a>
+            </footer>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>
